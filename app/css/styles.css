@@ -1,0 +1,25 @@
+.pie {
+	color: #222;
+	font-size: 8pt;
+	font-weight: bold;
+	padding: 1em;
+	text-align: center;
+}
+
+.chart-title {
+	font-weight: bold;
+}
+
+[data-chart] {
+	height: 300px;
+	width: 500px;
+}
+
+main {
+	margin: 1em;
+}
+
+main > div {
+	border-bottom: 1px dotted #ccc;
+	padding: 1em;
+}
