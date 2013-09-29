@@ -44,22 +44,22 @@
 			<!-- begin stats -->
 			<div>
 				<div class="chart-title">Disk Usage</div>
-				<div data-pm-chart id="disk" data-chart="pie" data-ng-model="model" data-ng-controller="diskChartCtrl"></div>
+				<div data-flot-chart id="disk" data-chart="pie" data-ng-model="model" data-ng-controller="diskChartCtrl"></div>
 			</div>
 
 			<div>
 				<div class="chart-title">CPU Usage (Past hour)</div>
-				<div data-pm-chart id="cpu" data-chart="line" data-ng-model="model" data-ng-controller="cpuChartCtrl"></div>
+				<div data-flot-chart id="cpu" data-chart="line" data-ng-model="model" data-ng-controller="cpuChartCtrl"></div>
 			</div>
 
 			<div>
 				<div class="chart-title">Server Traffic (Past hour)</div>
-				<div data-pm-chart id="traffic" data-chart="line" data-ng-model="model" data-ng-controller="trafficChartCtrl"></div>
+				<div data-flot-chart id="traffic" data-chart="line" data-ng-model="model" data-ng-controller="trafficChartCtrl"></div>
 			</div>
 
 			<div>
 				<div class="chart-title">Availability (Past 30 Days)</div>
-				<div data-pm-chart id="serveruptime" data-chart="line" data-ng-model="model" data-ng-controller="serveruptimeChartCtrl"></div>
+				<div data-flot-chart id="serveruptime" data-chart="line" data-ng-model="model" data-ng-controller="serveruptimeChartCtrl"></div>
 			</div>
 			<!-- end stats -->
 		</main>

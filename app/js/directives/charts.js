@@ -7,7 +7,7 @@
 	
 	var chart = angular.module('Charts', []);
 
-	chart.directive('pmChart', function () {
+	chart.directive('flotChart', function () {
 		return {
 			restrict: 'EA',
 			controller: ['$scope', '$attrs', function ($scope, $attrs) {
