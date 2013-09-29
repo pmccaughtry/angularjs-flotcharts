@@ -1,8 +1,8 @@
-;(function () {
+;(function (angular, $) {
 	'use strict';
-	/* 
-	 * Use of functional strict mode causes scoping issues when declaring the function or creating as an expression.
-	 * The use of angular.module (below) is needed to remedy.
+	/*
+	* Use of functional strict mode causes scoping issues when declaring the function or creating as an expression.
+	* The use of angular.module (below) is needed to remedy.
 	*/
 	
 	var chart = angular.module('Charts', []);
@@ -22,4 +22,4 @@
 			}]
 		};
 	});
-}());
+}(angular, $));
