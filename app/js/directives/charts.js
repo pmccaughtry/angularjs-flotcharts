@@ -5,9 +5,9 @@
 	* The use of angular.module (below) is needed to remedy.
 	*/
 	
-	var chart = angular.module('Charts', []);
+	angular.module('Charts', [])
 
-	chart.directive('flotChart', function () {
+	.directive('flotChart', function () {
 		return {
 			restrict: 'EA',
 			controller: ['$scope', '$attrs', function ($scope, $attrs) {
