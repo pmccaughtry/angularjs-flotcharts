@@ -7,19 +7,19 @@
 	
 	angular.module('Charts', [])
 
-	.directive('flotChart', function () {
-		return {
-			restrict: 'EA',
-			controller: ['$scope', '$attrs', function ($scope, $attrs) {
-				var plotid = '#' + $attrs.id,
-					model = $scope[$attrs.ngModel];
+		.directive('flotChart', function () {
+			return {
+				restrict: 'EA',
+				controller: ['$scope', '$attrs', function ($scope, $attrs) {
+					var plotid = '#' + $attrs.id,
+						model = $scope[$attrs.ngModel];
 
-				// add attribute to check type, populate default options but also pull in custom options from user?
+					// add attribute to check type, populate default options but also pull in custom options from user?
 
-				$scope.$watch('model', function (x) {
-					$.plot(plotid, x.data, x.options);
-				});
-			}]
-		};
-	});
+					$scope.$watch('model', function (x) {
+						$.plot(plotid, x.data, x.options);
+					});
+				}]
+			};
+		});
 }(angular, jQuery));
