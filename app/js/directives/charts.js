@@ -8,7 +8,7 @@
 	/**
 	Directive to render charts
 
-	@module directives.FlotCharts
+	@module Charts
 	*/
 	angular.module('Charts', [])
 		/**
