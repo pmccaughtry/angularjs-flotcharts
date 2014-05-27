@@ -1,25 +1,34 @@
 ;(function (angular, $) {
 	'use strict';
-	/*
-	* Use of functional strict mode causes scoping issues when declaring the function or creating as an expression.
-	* The use of angular.module (below) is needed to remedy.
+	/* 
+	 * Use of functional strict mode causes scoping issues when declaring the function or creating as an expression.
+	 * The use of angular.module (below) is needed to remedy.
 	*/
-	
-	angular.module('Charts', [])
 
+	/**
+	Directive to render charts
+
+	@module directives.FlotCharts
+	*/
+	angular.module('Charts', [])
+		/**
+		Chart creation directive
+
+		@class flotChart
+		@uses jQuery
+		@example
+			<elem data-flot-chart>
+		@return {Chart} element
+		*/
 		.directive('flotChart', function () {
 			return {
 				restrict: 'EA',
-				controller: ['$scope', '$attrs', function ($scope, $attrs) {
-					var plotid = '#' + $attrs.id,
-						model = $scope[$attrs.ngModel];
-
-					// add attribute to check type, populate default options but also pull in custom options from user?
-
-					$scope.$watch('model', function (x) {
-						$.plot(plotid, x.data, x.options);
-					});
-				}]
+				link: function (scope, element, attr) {
+					scope.$watch(attr.ngModel,function (x) {
+						if ((!x) || (!x.data)) { return; }
+						$.plot(element, x.data, x.options);
+					},true);
+				}
 			};
 		});
 }(angular, jQuery));
